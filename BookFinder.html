@@ -1,0 +1,525 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Flip Card</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: auto;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card-inner:hover {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-card-front img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: red;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <!-- Clifford card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/CharacterWebsite/blob/main/clifford.jpg?raw=true" alt="Clifford">
+      </div>
+      <div class="flip-card-back">
+        <div>E2</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional cards added below -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/A%20Bad%20Case%20of%20Stripes_E42.jpg?raw=true" alt="A Bad Case of Stripes">
+      </div>
+      <div class="flip-card-back">
+        <div>E42</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Amelia%20Bedelia_E34.jpg?raw=true" alt="Amelia Bedelia">
+      </div>
+      <div class="flip-card-back">
+        <div>E34</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Arthur_E7.jpg?raw=true" alt="Arthur">
+      </div>
+      <div class="flip-card-back">
+        <div>E7</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Bad_Kitty_E7.png?raw=true" alt="Bad Kitty">
+      </div>
+      <div class="flip-card-back">
+        <div>E7</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Bats%20at%20the%20Library_E26.jpeg?raw=true" alt="Bats at the Library">
+      </div>
+      <div class="flip-card-back">
+        <div>E26</div>
+      </div>
+    </div>
+  </div>
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Bear's%20Loose%20Tooth_E47.jpg?raw=true" alt="Bear's Loose Tooth">
+        </div>
+        <div class="flip-card-back">
+            <div>E47</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Biscuit_E9.jpg?raw=true" alt="Biscuit">
+        </div>
+        <div class="flip-card-back">
+            <div>E9</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Black%20Lagoon_E44.png?raw=true" alt="Black Lagoon">
+        </div>
+        <div class="flip-card-back">
+            <div>E44</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Chrysanthemum_E18.jpg?raw=true" alt="Chrysanthemum">
+        </div>
+        <div class="flip-card-back">
+            <div>E18</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Click%20Clack%20Moo_E11.jpg?raw=true" alt="Click Clack Moo">
+        </div>
+        <div class="flip-card-back">
+            <div>E11</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Cloudette_E26.jpg?raw=true" alt="Cloudette">
+        </div>
+        <div class="flip-card-back">
+            <div>E26</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Creepy_37.jpg?raw=true" alt="Creepy">
+        </div>
+        <div class="flip-card-back">
+            <div>E37</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Curdoroy_E15.jpg?raw=true" alt="Corduroy">
+        </div>
+        <div class="flip-card-back">
+            <div>E15</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Curious%20George_E37.jpg?raw=true" alt="Curious George">
+        </div>
+        <div class="flip-card-back">
+            <div>E37</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Detective%20Larue_E44.jpg?raw=true" alt="Detective Larue">
+        </div>
+        <div class="flip-card-back">
+            <div>E44</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Disney_E52.jpeg?raw=true" alt="Disney">
+        </div>
+        <div class="flip-card-back">
+            <div>E52</div>
+        </div>
+    </div>
+</div>
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Dr%20Seuss_E40.jpg?raw=true" alt="Dr Seuss">
+        </div>
+        <div class="flip-card-back">
+            <div>E40</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Fancy%20Nancy_E33.jpeg?raw=true" alt="Fancy Nancy">
+        </div>
+        <div class="flip-card-back">
+            <div>E33</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Fly%20Guy_E1.jpg?raw=true" alt="Fly Guy">
+        </div>
+        <div class="flip-card-back">
+            <div>E1</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Frog%20and%20Toad_27.jpg?raw=true" alt="Frog and Toad">
+        </div>
+        <div class="flip-card-back">
+            <div>E27</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Froggy_E27.jpg?raw=true" alt="Froggy">
+        </div>
+        <div class="flip-card-back">
+            <div>E27</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Henry%20and%20Mudge_E38.jpg?raw=true" alt="Henry and Mudge">
+        </div>
+        <div class="flip-card-back">
+            <div>E38</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/How%20Do%20Dinosaurs_E48.jpg?raw=true" alt="How Do Dinosaurs">
+        </div>
+        <div class="flip-card-back">
+            <div>E48</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/If%20You%20Take%20a%20Mouse%20to%20the%20Movies_E32.png?raw=true" alt="If You Take a Mouse to the Movies">
+        </div>
+        <div class="flip-card-back">
+            <div>E32</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Knuffle%20Bunny_E50.jpg?raw=true" alt="Knuffle Bunny">
+        </div>
+        <div class="flip-card-back">
+            <div>E50</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Lady%20Bug%20Girl_E43.jpg?raw=true" alt="Lady Bug Girl">
+        </div>
+        <div class="flip-card-back">
+            <div>E43</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Lady%20Pancake%20and%20Sir%20French%20Toast_E15.jpg?raw=true" alt="Lady Pancake and Sir French Toast">
+        </div>
+        <div class="flip-card-back">
+            <div>E15</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Llama%20Llama_E12.jpg?raw=true" alt="Llama Llama">
+        </div>
+        <div class="flip-card-back">
+            <div>E12</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Mother%20Bruce_17.jpg?raw=true" alt="Mother Bruce">
+        </div>
+        <div class="flip-card-back">
+            <div>17</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/No%20David_E42.png?raw=true" alt="No David">
+        </div>
+        <div class="flip-card-back">
+            <div>E42</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Oliva_E51.jpg?raw=true" alt="Oliva">
+        </div>
+        <div class="flip-card-back">
+            <div>E51</div>
+        </div>
+    </div>
+</div>
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/The%20Berenstain%20Bears_E4.jpg?raw=true" alt="The Berenstain Bears">
+        </div>
+        <div class="flip-card-back">
+            <div>E4</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Pig%20the%20Pug_E5.jpg?raw=true" alt="Pig the Pug">
+        </div>
+        <div class="flip-card-back">
+            <div>E5</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/The%20Very%20Hungry%20Caterpillar_E9.png?raw=true" alt="The Very Hungry Caterpillar">
+        </div>
+        <div class="flip-card-back">
+            <div>E9</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/The%20Day%20the%20Crayons%20Quit_E12.jpg?raw=true" alt="The Day the Crayons Quit">
+        </div>
+        <div class="flip-card-back">
+            <div>E12</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Pout%20Pout%20Fish_E13.jpg?raw=true" alt="Pout Pout Fish">
+        </div>
+        <div class="flip-card-back">
+            <div>E13</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Smart%20Cookie_E22.jpg?raw=true" alt="Smart Cookie">
+        </div>
+        <div class="flip-card-back">
+            <div>E22</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Pinklicious_E22.jpg?raw=true" alt="Pinklicious">
+        </div>
+        <div class="flip-card-back">
+            <div>E22</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Otis_E27.jpg?raw=true" alt="Otis">
+        </div>
+        <div class="flip-card-back">
+            <div>E27</div>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Henry%20and%20Mudge_E38.jpg?raw=true" alt="Henry and Mudge">
+        </div>
+        <div class="flip-card-back">
+            <div>E38</div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+</body>
+</html>
