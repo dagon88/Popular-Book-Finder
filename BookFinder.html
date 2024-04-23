@@ -508,7 +508,27 @@
         </div>
     </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.flip-card-inner');
+  cards.forEach(card => {
+    card.addEventListener('touchstart', function(event) {
+      console.log('Touch start on card with event:', event);
+      // Prevent multiple touches on this card from triggering browser default behaviors
+      event.preventDefault();
+      if (event.touches.length === 1) { // Check if there's exactly one touch on the card
+        this.style.transform = 'rotateY(180deg)';
+      }
+    }, { passive: false });
 
+    card.addEventListener('touchend', function(event) {
+      if (event.touches.length === 0) { // All touches removed
+        this.style.transform = '';
+      }
+    });
+  });
+});
+</script>
 
 </div>
 
