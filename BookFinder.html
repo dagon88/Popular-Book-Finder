@@ -555,23 +555,33 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.flip-card-inner');
+
   cards.forEach(card => {
+    let touchStarted = false; // Flag to check if touch has started on the card
+
     card.addEventListener('touchstart', function(event) {
-      console.log('Touch start on card with event:', event);
-      // Prevent multiple touches on this card from triggering browser default behaviors
-      event.preventDefault();
-      if (event.touches.length === 1) { // Check if there's exactly one touch on the card
+      // Directly flip the card on touch start
+      if (!touchStarted) {
         this.style.transform = 'rotateY(180deg)';
+        touchStarted = true;
       }
+      event.preventDefault(); // Prevent default to avoid scrolling and zooming interfaces
     }, { passive: false });
 
     card.addEventListener('touchend', function(event) {
-      if (event.touches.length === 0) { // All touches removed
-        this.style.transform = '';
-      }
+      // Reset the transform and touchStarted flag when touch ends
+      this.style.transform = '';
+      touchStarted = false;
+    });
+
+    card.addEventListener('touchcancel', function(event) {
+      // Handle touch cancel similarly to touch end
+      this.style.transform = '';
+      touchStarted = false;
     });
   });
 });
+
 </script>
 
 </div>
