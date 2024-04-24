@@ -557,31 +557,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.flip-card-inner');
 
   cards.forEach(card => {
-    let touchStarted = false; // Flag to check if touch has started on the card
-
     card.addEventListener('touchstart', function(event) {
-      // Directly flip the card on touch start
-      if (!touchStarted) {
-        this.style.transform = 'rotateY(180deg)';
-        touchStarted = true;
-      }
+      // Flip the card
+      this.style.transform = 'rotateY(180deg)';
       event.preventDefault(); // Prevent default to avoid scrolling and zooming interfaces
-    }, { passive: false });
 
-    card.addEventListener('touchend', function(event) {
-      // Reset the transform and touchStarted flag when touch ends
-      this.style.transform = '';
-      touchStarted = false;
-    });
-
-    card.addEventListener('touchcancel', function(event) {
-      // Handle touch cancel similarly to touch end
-      this.style.transform = '';
-      touchStarted = false;
+      // Set timeout to flip the card back after 10 seconds
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 10000); // 10000 milliseconds = 10 seconds
     });
   });
 });
-
 </script>
 
 </div>
