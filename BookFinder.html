@@ -5,24 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Character Flip Card</title>
 <style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  .sticky-header {
-    position: sticky;
-    top: 0;
-    background-color: #f9f9f9;
-    color: #555;
-    text-align: center;
-    font-size: 24px;
-    padding: 10px 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -71,29 +53,65 @@
 
   .flip-card-back {
     background-color: #2980b9;
-    color: white;
+    color: red;
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 78px;
-    font-weight: bold;
-    font-family: 'Verdana', Arial, sans-serif;
+    font-weight: bold; /* Make text bold */
+    font-family: 'Verdana', Arial, sans-serif; /* Set Verdana, with fallbacks */
   }
 </style>
 </head>
 <body>
 
-<div class="sticky-header">
-  Click the Character to find the Book
-</div>
-
 <div class="grid-container">
-  <!-- Existing cards and new cards here as before -->
-</div>
+  <!-- Existing cards -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/CharacterWebsite/blob/main/clifford.jpg?raw=true" alt="Clifford">
+      </div>
+      <div class="flip-card-back">
+        <div>E6</div>
+      </div>
+    </div>
+  </div>
 
-</body>
-</html>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/A%20Bad%20Case%20of%20Stripes_E42.jpg?raw=true" alt="A Bad Case of Stripes">
+      </div>
+      <div class="flip-card-back">
+        <div>E42</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Amelia%20Bedelia_E34.jpg?raw=true" alt="Amelia Bedelia">
+      </div>
+      <div class="flip-card-back">
+        <div>E34</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New cards -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://github.com/dagon88/Popular-Book-Finder/blob/main/Pete%20the%20Cat_E51.jpg?raw=true" alt="Pete the Cat">
+      </div>
+      <div class="flip-card-back">
+        <div>E51</div>
+      </div>
+    </div>
+  </div>
 
 
   <div class="flip-card">
